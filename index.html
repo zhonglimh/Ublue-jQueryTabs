@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ublue jQuery Tabs插件 支持自定义样式 可多次调用</title>
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="js/Ublue-jQueryTabs-1.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".tabs").UblueTabs(); //默认调用方法
+
+	$(".custom").UblueTabs({ //自定义选项卡区域
+	tabsTit:"customTit", //自定义标签区域
+	tabsTab:"customTab", //自定义标签
+	tabsCon:"customCon", //自定义内容区域
+	tabsList:"customList", //自定义内容列表
+	tabsHover:"customHover", //自定义鼠标点击后样式
+	eventType:"click" //鼠标经过标签切换内容 -- 此处不写则默认为hover事件 当然也可以把这里的click改成hover
+	});
+});
+</script>
+<link href='http://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet' type='text/css'>
+<style type="text/css">
+body,div,ul,li{ font:12px/1.5 "Electrolize",Arial,Tahoma; margin:0px; padding:0px;}
+body{ background:url(body_bg.png);}
+ul,li{ list-style:none;}
+
+/*default*/
+.tabs{ width:400px; height:160px; margin:40px auto; border:3px solid #333;}
+.tabsTit,.tabsCon{ overflow:hidden;}
+.tabsTit { text-align:center; color:#B3AAB4;}
+.tabsTit li{ float:left; width:100px; height:28px; line-height:28px; cursor:pointer; background:#262626; border-bottom:2px solid #666666;}
+.tabsTit .tabsHover{ background:#1E1E1E; border-bottom:2px solid #A11E22;}
+.tabsCon { width:400px; height:130px; background:black; color:#B3AAB4;}
+.tabsCon li{ width:380px; height:110px; padding:10px;}
+
+/*custom*/
+.custom{ width:400px; height:160px; margin:40px auto; border:3px solid #121420;}
+.customTit,.customCon{ overflow:hidden;}
+.customTit { text-align:center; color:#B3AAB4;}
+.customTit li{ float:left; width:100px; height:30px; line-height:30px; cursor:pointer; background:#272C40; color:#FFF;}
+.customTit .customHover{ background:#607C9C;}
+.customCon{ width:400px; height:130px; background:#1D2130; color:#B3AAB4;}
+.customCon li{ width:380px; height:110px; padding:10px;}
+
+/*ad*/
+.footer{ width:980px; margin:20px auto;text-align:center; color:white; border-top:1px #222 solid; box-shadow:0 -1px 0 black;  text-shadow:1px 1px 1px black;}
+</style>
+</head>
+<body>
+
+<!--default-->
+<div class="tabs">
+	<ul class="tabsTit">
+		<li class="tabsTab tabsHover">Title1</li>
+		<li class="tabsTab">Title2</li>
+		<li class="tabsTab">Title3</li>
+		<li class="tabsTab">Title4</li>
+	</ul>
+	<ul class="tabsCon">
+		<li class="tabsList">Content1 默认的结构和样式</li>
+		<li class="tabsList">Content2</li>
+		<li class="tabsList">Content3</li>
+		<li class="tabsList">Content4</li>
+	</ul>
+</div>
+
+<!--custom-->
+<div class="custom">
+	<ul class="customTit">
+		<li class="customTab customHover">Title1</li>
+		<li class="customTab">Title2</li>
+		<li class="customTab">Title3</li>
+		<li class="customTab">Title4</li>
+	</ul>
+	<ul class="customCon">
+		<li class="customList">Content1 支持自定义样式 鼠标点击标签切换选项卡</li>
+		<li class="customList">Content2</li>
+		<li class="customList">Content3</li>
+		<li class="customList">Content4</li>
+	</ul>
+</div>
+
+<!--again-->
+<div class="tabs">
+	<ul class="tabsTit">
+		<li class="tabsTab tabsHover">Title1</li>
+		<li class="tabsTab">Title2</li>
+		<li class="tabsTab">Title3</li>
+		<li class="tabsTab">Title4</li>
+	</ul>
+	<ul class="tabsCon">
+		<li class="tabsList">Content1 默认的结构和样式</li>
+		<li class="tabsList">Content2</li>
+		<li class="tabsList">Content3</li>
+		<li class="tabsList">Content4</li>
+	</ul>
+</div>
+
+<div class="footer">
+	<p>Ublue jQuery Tabs</p>
+	<p>By www.bluesdream.com</p>
+</div>
+
+</body>
+</html>

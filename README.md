@@ -10,7 +10,7 @@ Ublue-jQueryTabs
             tabsCon:"customCon", //自定义内容区域
             tabsList:"customList", //自定义内容列表
             tabsHover:"customHover", //自定义鼠标点击后样式
-            eventType:"click" //鼠标经过标签切换内容 （此处不写则默认为hover事件 当然也可以把这里的click改成hover）
+            eventType:"click" //标签切换方式 可以选参数[ click | hover ]
         });
     });
 

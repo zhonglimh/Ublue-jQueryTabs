@@ -1,5 +1,5 @@
-Ublue-jQueryTabs
-================
+## Ublue jQuery Tabs插件 支持自定义样式 可多次调用
+
 
     $(function(){
         $(".tabs").UblueTabs(); //默认调用方法
@@ -14,4 +14,4 @@ Ublue-jQueryTabs
         });
     });
 
-原文地址：http://www.bluesdream.com/blog/ublue-jquery-tabs-plugin.html
+Demo：http://www.bluesdream.com/case/jquery/jquery-tabs/
